@@ -51,6 +51,15 @@ namespace EsSlide
                 }
                 Console.WriteLine();
             }
+
+            double a = scuola.CalcolaMedia(studente1);
+            Console.WriteLine($"Media {studente1.Nome} {studente1.Cognome} nel 2026: {a}");
+
+            double[] b = scuola.CalcolaMediaMensile(studente1, 2026);
+            for (int i = 0; i < b.Length; i++)
+            {
+                Console.WriteLine($"\nMese {i + 1}: {b[i]}");
+            }
         }
     }
 }
